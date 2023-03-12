@@ -1,0 +1,13 @@
+@import "./vanilla.css";
+
+header nav {
+  display: flex;
+}
+
+header nav a:not(:last-of-type) {
+  padding-right: 16px;
+}
+
+header nav a.active {
+  font-weight: bold;
+}

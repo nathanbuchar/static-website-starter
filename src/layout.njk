@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+      <title>{{ title }} — My app </title>
+    {% else %}
+      <title>My app</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <nav>
+          <a href="/" class="{{ 'active' if url == '/' }}">
+            Home
+          </a>
+          <a href="/blog" class="{{ 'active' if blogPost or url == '/blog' }}">
+            Blog
+          </a>
+        </nav>
+      </header>
+      <main id="main">
+        {% block content %}
+          {# Page content goes here. #}
+        {% endblock %}
+      </main>
+    </div>
+  </body>
+</html>

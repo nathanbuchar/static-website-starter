@@ -1,0 +1,18 @@
+{% extends "layout.njk" %}
+
+{% set url = "/blog" %}
+{% set title = "Blog" %}
+
+{% block content %}
+  <h1>Blog</h1>
+  <ul>
+    {% for page in pages | selectByField('blogPost') | sort(true, false, 'fields.date') %}
+      <li>
+        {{ page.fields.date }} —
+        <a href="{{ page.fields.url }}">
+          {{ page.fields.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

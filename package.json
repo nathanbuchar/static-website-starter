@@ -1,0 +1,21 @@
+{
+  "name": "static-template",
+  "version": "1.0.0",
+  "private": "true",
+  "license": "CC-BY-NC-SA-4.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "server": "node scripts/server.js"
+  },
+  "dependencies": {
+    "contentful": "^9.3.3",
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.1.0",
+    "markdown-it": "^13.0.1",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "serve-handler": "^6.1.5"
+  }
+}
